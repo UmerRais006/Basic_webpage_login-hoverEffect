@@ -1,2 +1,5 @@
 # Basic_webpage_login-hoverEffect
-first webpage using gover and psedo selectors
+first webpage using html css
+hover effect
+hover login button effect using psedo selectors
+
