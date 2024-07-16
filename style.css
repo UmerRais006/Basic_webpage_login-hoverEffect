@@ -1,0 +1,155 @@
+body{
+    padding: 0%;
+    margin: 0%;
+    background: rgba(0,0,0,0.7) url(./bgLect1.jpeg);
+    background-size: cover;
+    background-blend-mode: darken;
+   background-position: center;
+    background-repeat: no-repeat;
+}
+
+:root {
+    --tran: all 0.5s ease;
+}
+
+.nav {
+    display: flex;
+
+}
+
+.nav .img img {
+    height: 100px;
+    padding-top: 1.3em;
+    padding-left: 2em;
+}
+
+.nav .list ul {
+    display: flex;
+
+    margin-left: 25em;
+    align-items: center;
+}
+
+.nav .list ul li {
+    padding: 0.9em;
+    color: antiquewhite;
+    font-family: "Ubuntu", sans-serif;
+    list-style: none;
+    font-weight: 500;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    font-size: 25px;
+}
+
+.nav .list ul li:hover {
+    color: yellowgreen;
+}
+
+.nav .list ul li::after {
+    content: "";
+    transform: scale(0);
+    transform-origin: left;
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: yellowgreen;
+    transition: transform 2s ease;
+    border-radius: 2px;
+
+}
+
+.nav ul li:hover::after {
+    transform: scale(1);
+}
+
+.bodycontent {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bodycontent h1 {
+    letter-spacing: 1px;
+    color: yellowgreen;
+    padding-bottom: 0.2em;
+    font-family: "Ubuntu", sans-serif;
+    font-style: oblique;
+
+}
+
+.bodycontent p {
+
+    font-family: "Playwrite BE VLG", cursive;
+    line-height: 1px;
+    font-style: italic;
+    color: antiquewhite;
+
+}
+
+.bodycontent .keys{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    padding-top: 45px;
+    gap: 40px;
+   
+
+}
+
+.bodycontent .keys a { 
+   text-decoration: none;
+color: aquamarine;
+font-weight: 600;
+font-size: 16px;
+}
+.keys button a:hover{
+    color: black;
+ }
+.bodycontent .keys button{
+    padding: 10px;
+    background-color: black;
+    color: antiquewhite;
+    border: 0;
+    background: rgba(0,0,0,0.1);
+    border: 3px solid yellowgreen;
+    border-radius: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: relative;
+    z-index: 1;
+
+}
+button{
+    overflow: hidden;
+}
+
+.bodycontent .keys button:hover {
+    transition: var(--tran);
+    
+}
+
+
+.bodycontent .keys ::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: yellowgreen;
+    border-radius: 40px;
+    transform: translateX(-100%);
+
+}
+
+.bodycontent .keys button:hover::before {
+    transform: translateX(0);
+    z-index: -1;
+    transition: var(--tran);
+
+}
+
